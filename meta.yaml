@@ -1,0 +1,39 @@
+package:
+  name: gromacs
+  version: 2023.5_plumed_2.9.1
+
+source:
+  - url: ftp://ftp.gromacs.org/pub/gromacs/gromacs-2023.5.tar.gz
+    md5: 430ea59bfb4b487741166488cddaa1b7  # obtained from md5sum gromacs-2023.5.tar.gz
+
+build:
+  number: 0
+  script: build.sh
+
+requirements:
+  build:
+    - cmake
+    - make
+    - gcc
+    - openmpi
+    - fftw
+    - plumed=2.9
+  host:
+    - openmpi
+  run:
+    - openmpi
+    - fftw
+    - plumed=2.9
+
+test:
+  commands:
+    - gmx -version
+    - gmx mdrun -h | grep plumed
+
+about:
+  home: https://www.gromacs.org/
+  license: GPL-2.0
+  summary: "GROMACS 2023.5 patched with PLUMED 2.9"
+  description: |
+    GROMACS is a versatile package to perform molecular dynamics. PLUMED is patched to enable enhanced sampling simulations.
+
