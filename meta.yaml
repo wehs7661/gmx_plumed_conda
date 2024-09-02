@@ -8,7 +8,6 @@ source:
 
 build:
   number: 0
-  script: build.sh
 
 requirements:
   build:
@@ -32,8 +31,8 @@ test:
 
 about:
   home: https://www.gromacs.org/
-  license: GPL-2.0
+  license: GNU Lesser General Public License (LGPL)
   summary: "GROMACS 2023.5 patched with PLUMED 2.9"
   description: |
-    GROMACS is a versatile package to perform molecular dynamics. PLUMED is patched to enable enhanced sampling simulations.
+    GROMACS is a package to perform molecular dynamics. PLUMED is patched to enable enhanced sampling simulations.
 
