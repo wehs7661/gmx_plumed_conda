@@ -25,7 +25,6 @@ requirements:
     - liblapack
     - llvm-openmp  # [osx]
     - zlib
-    - fftw
     - mpich
   run:
     - gsl
